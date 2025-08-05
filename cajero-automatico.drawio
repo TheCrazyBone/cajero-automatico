@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="28.0.7">
+  <diagram name="Página-1" id="QPPb-ygcAuW6V_k0CTgy">
+    <mxGraphModel dx="1042" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="I8yizdFDosUFB_yiM17j-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="olESH1rtktU1Scrg3BBR-1" target="olESH1rtktU1Scrg3BBR-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="olESH1rtktU1Scrg3BBR-1" value="INICIO" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+          <mxGeometry x="374" y="10" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="olESH1rtktU1Scrg3BBR-2" target="olESH1rtktU1Scrg3BBR-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="olESH1rtktU1Scrg3BBR-2" value="LEER monto_a_retirar" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="334" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="olESH1rtktU1Scrg3BBR-3" target="I8yizdFDosUFB_yiM17j-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="olESH1rtktU1Scrg3BBR-3" value="LEER saldo_disponible" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="331" y="220" width="166" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="I8yizdFDosUFB_yiM17j-1" target="I8yizdFDosUFB_yiM17j-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="I8yizdFDosUFB_yiM17j-1" target="I8yizdFDosUFB_yiM17j-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-1" value="SI&lt;div&gt;monto_a_retirar &amp;gt; saldo_disponible&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="283" y="310" width="262" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-4" value="MOSTRAR&lt;div&gt;&quot;Saldo Insuficiente&quot;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="365" width="186" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="I8yizdFDosUFB_yiM17j-9" target="I8yizdFDosUFB_yiM17j-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-9" value="SINO" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="289" y="502" width="250" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="I8yizdFDosUFB_yiM17j-11" target="I8yizdFDosUFB_yiM17j-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-11" value="&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;billetes_1000 ← monto_a_retirar // 1000&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; restante ← monto_a_retirar % 1000&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;billetes_500 ← restante // 500&lt;/span&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; restante ← restante % 500&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;billetes_100 ← restante // 100&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="264.5" y="700" width="299" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="I8yizdFDosUFB_yiM17j-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;MOSTRAR &quot;Billetes entregados:&quot;&lt;br&gt;MOSTRAR &quot; - De $1000: &quot;, billetes_1000&lt;br&gt;MOSTRAR &quot; - De $500: &quot;, billetes_500&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;MOSTRAR &quot; - De $100: &quot;, billetes_100&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="269.5" y="870" width="289" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

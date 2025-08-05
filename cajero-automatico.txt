@@ -1,0 +1,70 @@
+--------------------------------------------------------------
+
+SITUACIÓN: CAJERO AUTOMÁTICO BÁSICO
+
+Un cliente quiere retirar dinero de un cajero automático. El cajero solo entrega billetes
+de $1000, $500 y $100 y el sistema debe entregar la menor cantidad posible de billetes para
+cubrir el monto solicitado.
+    El monto a retirar debe ser múltiplo de 100 y no puede superar el saldo disponible
+en la cuenta del cliente.
+
+---------------------------------------------------------------
+
+ALGORITMO PENSADO:
+
+1. Ingresar el monto de dinero a retirar por parte del cliente.
+2. Evaluar si es múltiplo de 100 y si no excede el saldo disponible del cliente.
+    2.1 Si el monto excede el saldo disponible:
+        Mostrar mensaje de que saldo insuficiente.
+    2.2 Si no excede el saldo disponible pero no es múltiplo de 100:
+        Mostrar mensaje de que ingrese un monto redondo mayor o igual a $100
+    2.3 Si cumple con ambas condiciones (else):
+        Leer el monto ingresado y definir:
+            2.3.1 Si el monto es mayor a 100 y menor a 500:
+                - Dividir monto por 100
+                - Mostrar el resultado dentro de un mensaje
+            2.3.2 Si el monto es mayor a 500 y menor a 1000:
+                - Dar un billete de 500 (monto - 500)
+                - Si hay restante dividirlo por 100
+                - Mostrar mensaje de que se devolvió un billete de 500 y lo que falta en billetes de 100.
+            2.3.3 Si el monto es mayor a 1000:
+                - Restar 1000 hasta que ya no se pueda mas
+                  (SI SE PUEDE RESTAR HASTA 0, DEVOLVER EL NÚMERO DE VECES COMO NÚMERO DE BILLETES DE 1000 DEVUELTOS)
+                - En caso de que se reste y quede un numero menor a 1000
+                    - Si es mayor a 500 pero menor que 1000:
+                        - Dar un billete de 500 (monto - 500)
+                        - Si hay restante, dividirlo por 100
+                    - Si es mayor a 100 y menor que 500
+                        - Dividir monto por 100
+
+-------------------------------------------------------------------
+
+ALGORITMO EVALUADO POR IA Y HECHO EN PSEUDOCÓDIGO:
+
+INICIO
+    LEER monto_a_retirar
+    LEER saldo_disponible
+
+    SI monto_a_retirar % 100 ≠ 0 ENTONCES
+        MOSTRAR "El monto debe ser múltiplo de 100."
+    SINO
+        SI monto_a_retirar > saldo_disponible ENTONCES
+            MOSTRAR "Saldo insuficiente."
+        SINO
+            billetes_1000 ← monto_a_retirar // 1000
+            restante ← monto_a_retirar % 1000
+
+            billetes_500 ← restante // 500
+            restante ← restante % 500
+
+            billetes_100 ← restante // 100
+
+            MOSTRAR "Billetes entregados:"
+            MOSTRAR " - De $1000: ", billetes_1000
+            MOSTRAR " - De $500: ", billetes_500
+            MOSTRAR " - De $100: ", billetes_100
+        FIN SI
+    FIN SI
+FIN
+
+-----------------------------------------------------------------------
