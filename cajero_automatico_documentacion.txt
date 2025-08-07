@@ -1,0 +1,160 @@
+--------------------------------------------------------------
+SITUACION PROBLEMATICA: CAJERO AUTOMATICO REALISTA
+--------------------------------------------------------------
+
+Un cliente quiere retirar dinero de un cajero automatico. El cajero solo entrega billetes
+de $1000, $500 y $100 y el sistema debe entregar la menor cantidad posible de billetes para
+cubrir el monto solicitado.
+    El monto a retirar debe ser multiplo de 100 y no puede superar el saldo disponible
+en la cuenta del cliente.
+
+REQUISITOS ADICIONALES:
+- El cajero debe simular la experiencia real de un cajero automatico
+- Debe solicitar PIN de 4 digitos antes de permitir operaciones
+- Debe mostrar un menu de operaciones disponibles
+- Debe permitir consultar saldo y realizar extracciones
+- Debe mantener un flujo continuo hasta que el usuario decida salir
+
+---------------------------------------------------------------
+
+ALGORITMO PRINCIPAL (CALCULO DE BILLETES):
+
+1. Ingresar el monto de dinero a retirar por parte del cliente.
+2. Evaluar si es multiplo de 100 y si no excede el saldo disponible del cliente.
+    2.1 Si el monto excede el saldo disponible:
+        Mostrar mensaje de que saldo insuficiente.
+    2.2 Si no excede el saldo disponible pero no es multiplo de 100:
+        Mostrar mensaje de que ingrese un monto redondo mayor o igual a $100
+    2.3 Si cumple con ambas condiciones (else):
+        Leer el monto ingresado y definir:
+            2.3.1 Calcular billetes de $1000: monto // 1000
+            2.3.2 Calcular restante: monto % 1000
+            2.3.3 Calcular billetes de $500: restante // 500
+            2.3.4 Calcular nuevo restante: restante % 500
+            2.3.5 Calcular billetes de $100: restante // 100
+            2.3.6 Mostrar cantidad de billetes de cada denominacion
+            2.3.7 Actualizar saldo disponible
+
+---------------------------------------------------------------
+
+PSEUDOCODIGO DEL ALGORITMO PRINCIPAL:
+
+INICIO
+    LEER monto_a_retirar
+    LEER saldo_disponible
+
+    SI monto_a_retirar % 100 ≠ 0 ENTONCES
+        MOSTRAR "El monto debe ser multiplo de 100."
+    SINO
+        SI monto_a_retirar > saldo_disponible ENTONCES
+            MOSTRAR "Saldo insuficiente."
+        SINO
+            billetes_1000 ← monto_a_retirar // 1000
+            restante ← monto_a_retirar % 1000
+
+            billetes_500 ← restante // 500
+            restante ← restante % 500
+
+            billetes_100 ← restante // 100
+
+            MOSTRAR "Billetes entregados:"
+            SI billetes_1000 > 0 ENTONCES
+                MOSTRAR " - De $1000: ", billetes_1000
+            SI billetes_500 > 0 ENTONCES
+                MOSTRAR " - De $500: ", billetes_500
+            SI billetes_100 > 0 ENTONCES
+                MOSTRAR " - De $100: ", billetes_100
+            
+            nuevo_saldo ← saldo_disponible - monto_a_retirar
+            MOSTRAR "Monto retirado: $", monto_a_retirar
+            MOSTRAR "Nuevo saldo: $", nuevo_saldo
+        FIN SI
+    FIN SI
+FIN
+
+---------------------------------------------------------------
+
+MEJORAS IMPLEMENTADAS PARA EXPERIENCIA REALISTA:
+
+1. BIENVENIDA AL CAJERO:
+   - Mensaje de bienvenida con separadores visuales
+   - Simulacion de insercion de tarjeta bancaria
+   - Interfaz profesional con formato mejorado
+
+2. SISTEMA DE AUTENTICACION (PIN):
+   - Solicitud de PIN de 4 digitos
+   - Validacion de formato (exactamente 4 digitos numericos)
+   - Mensaje de confirmacion de acceso autorizado
+   - Cualquier PIN valido es aceptado (como solicitado)
+
+3. MENU DE OPERACIONES:
+   - Interfaz clara con opciones numeradas
+   - Opcion 1: Consulta de saldo
+   - Opcion 2: Extraccion de dinero
+   - Opcion 3: Salir del cajero
+   - Validacion de opciones seleccionadas
+
+4. CONSULTA DE SALDO:
+   - Muestra el saldo disponible con formato de miles
+   - Interfaz limpia con separadores
+   - Retorna al menu principal automaticamente
+
+5. SISTEMA DE EXTRACCION MEJORADO:
+   - Muestra saldo disponible antes de la extraccion
+   - Validaciones mejoradas (monto > 0)
+   - Calculo optimizado de billetes
+   - Mostrar resultados con formato profesional
+   - Actualizacion de saldo en tiempo real
+
+6. EXPERIENCIA DE USUARIO CONTINUA:
+   - Bucle principal que permite multiples operaciones
+   - Opcion de salir en cualquier momento
+   - Mensaje de despedida al salir
+   - Simulacion de retiro de tarjeta
+
+7. MANEJO DE ERRORES:
+   - Validacion de entrada de datos
+   - Mensajes de error claros y especificos
+   - Continuidad del programa sin interrupciones
+   - Proteccion contra entradas invalidas
+
+8. FORMATO Y PRESENTACION:
+   - Separadores visuales para mejor legibilidad
+   - Formato de numeros con separadores de miles
+   - Interfaz consistente en todas las operaciones
+   - Mensajes informativos y profesionales
+
+---------------------------------------------------------------
+
+ESTRUCTURA DEL PROGRAMA FINAL:
+
+1. FUNCIONES PRINCIPALES:
+   - solicitar_pin(): Maneja la autenticacion del usuario
+   - mostrar_menu(): Presenta las opciones disponibles
+   - consultar_saldo(): Muestra el saldo actual
+   - extraer_dinero(): Procesa las extracciones
+   - main(): Coordina todo el flujo del programa
+
+2. FLUJO DE EJECUCION:
+   - Bienvenida e insercion de tarjeta
+   - Solicitud y validacion de PIN
+   - Generacion de saldo aleatorio
+   - Bucle principal de operaciones
+   - Salida y despedida
+
+3. CARACTERISTICAS TECNICAS:
+   - Codificacion UTF-8 explícita
+   - Manejo de excepciones robusto
+   - Validaciones completas de entrada
+   - Interfaz de usuario intuitiva
+   - Experiencia realista de cajero automatico
+
+---------------------------------------------------------------
+
+RESULTADO FINAL:
+Un cajero automatico completamente funcional que simula la experiencia real
+de uso, con autenticacion, menu de operaciones, calculo optimizado de billetes
+y una interfaz profesional que mantiene todas las funcionalidades originales
+mientras agrega la experiencia de usuario de un cajero automatico real.
+
+---------------------------------------------------------------
